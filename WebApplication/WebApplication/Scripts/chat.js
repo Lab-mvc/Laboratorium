@@ -7,3 +7,8 @@ $(document).ready(function () {
            href = href + "&logOn=true";
            $("#LoginButton").attr("href", href).click();
           //pole
+            $("Username").text(nickName);
+        }
+    });
+});
+//przejście dalej
