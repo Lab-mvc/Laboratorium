@@ -10,6 +10,11 @@ namespace WebApplication.Models{
 
         // Wiadomosci
         public List<ChatMessage> Messages;
+          
+        public ChatModel(){
+            Users = new List<ChatUser>();
+            Messages = new List<ChatMessage>();
+        }
   }
   public class ChatUser{
       public string Name;
