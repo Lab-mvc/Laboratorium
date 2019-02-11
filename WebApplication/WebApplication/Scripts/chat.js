@@ -60,7 +60,17 @@
       $("#Error").text(result.responseText);
       setTimeout("$('#Error').empty();", 2000);
     } 
-
+// aktualizacja co 5 sec
+function Refresh() {
+    var href = "/Home?user=" + encodeURIComponent($("#Username").text());
+    $("#ActionLink").attr("href", href).click();
+    setTimeout("Refresh();", 5000);
+}
+//komunikat
+function ChatOnFailure(result) {
+    $("#Error").text(result.responseText);
+    setTimeout("$('#Error').empty();", 2000);
+}
 
     
     
