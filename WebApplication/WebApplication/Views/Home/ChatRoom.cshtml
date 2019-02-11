@@ -11,5 +11,13 @@ new AjaxOptions{UpdateTargetId = "RefreshArea" , OnSuccess = "ChatOnSuccess", On
 new { @id = "ActionLink", @style = "visibility:hidden;" })
 
 <div id="inputForm">
-    
+    <table>
+        <tr>
+            <td rowspan="2"><textarea id="txtMessage" rows="3"></textarea></td>
+            <td><button id="btnMessage" value="Wyślij ">Wyślij </button></td>
+        </tr>
+        <tr>
+            <td><button id="btnLogOff" value="Wyłoguj">Wyłoguj</button></td>
+        </tr>
+    </table>
 </div>
