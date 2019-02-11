@@ -28,3 +28,14 @@ function LoginOnSuccess(result) {
         }
     });
     
+    $("#btnMessage").click(function () {
+        var text = $("#txtMessage").val();
+        if (text) {
+            //za pomoca Index przesyłamy parametr "chatMessage" 
+            var href = "/Home?user=" + encodeURIComponent($("#Username").text());
+            href = href + "&chatMessage=" + encodeURIComponent(text);
+            $("#ActionLink").attr("href", href).click();
+            $("#txtMessage").empty();
+        }
+    });
+    
