@@ -1,4 +1,4 @@
-$(document).ready(function () {
+  $(document).ready(function () {
     // login
     $("#btnLogin").click(function () {
         var nickName = $("#txtUserName").val();
@@ -10,9 +10,9 @@ $(document).ready(function () {
             $("Username").text(nickName);
         }
     });
-});
-//przejście dalej
-function LoginOnSuccess(result) {
+ });
+ //przejście dalej
+ function LoginOnSuccess(result) {
     
     Scroll();
     ShowLastRefresh();
@@ -38,4 +38,30 @@ function LoginOnSuccess(result) {
             $("#txtMessage").empty();
         }
     });
+    
+        //btn wyjscia
+    $("#btnLogOff").click(function () {
+        //za pomoca Index przesyłamy parametr "logOff"
+        var href = "/Home?user=" + encodeURIComponent($("#Username").text());
+        href = href + "&logOff=true";
+        $("#ActionLink").attr("href", href).click();
+        document.location.href = "Home";
+    });
+    }
+    //komunikat o zly login 
+    function LoginOnFailure(result) {
+      $("#Username").val("");
+      $("#Error").text(result.responseText);
+      setTimeout("$('#Error').empty();", 2000);
+    }
+      //komunikat zły login 
+      function LoginOnFailure(result) {
+       $("#Username").val("");
+      $("#Error").text(result.responseText);
+      setTimeout("$('#Error').empty();", 2000);
+    } 
+
+
+    
+    
     
