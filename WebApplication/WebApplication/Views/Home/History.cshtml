@@ -9,7 +9,15 @@
 </div>
 
 <div id="Messages">
-
-
-
+    <p>
+                @msg.Date<br />
+                @if (msg.User != null)
+                {
+                    <b>@(msg.User.Name + ":")</b> @msg.Text
+                }
+                else
+                {
+                    <span class="serverMes">@msg.Text</span>
+                }
+            </p>
 </div>
