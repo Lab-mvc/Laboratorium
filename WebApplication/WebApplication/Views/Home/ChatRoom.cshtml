@@ -7,6 +7,8 @@
 </div>
 
 @Ajax.ActionLink("ActionLink", "Index", new { user = "", logOn = "", logOff = "", chatMessage = "" }
+new AjaxOptions{UpdateTargetId = "RefreshArea"}
+new { @id = "ActionLink", @style = "visibility:hidden;" })
 
 <div id="inputForm">
     
