@@ -14,6 +14,11 @@ namespace WebApplication.Models{
         public ChatModel(){
             Users = new List<ChatUser>();
             Messages = new List<ChatMessage>();
+            
+            Messages.Add(new ChatMessage()
+            {
+                Text = "Czat wlaczony: " + DateTime.Now
+            });
         }
   }
   public class ChatUser{
