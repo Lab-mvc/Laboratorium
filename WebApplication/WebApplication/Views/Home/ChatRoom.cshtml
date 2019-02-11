@@ -1,0 +1,13 @@
+@using WebApplication.Models
+@model ChatModel
+<div id="RefreshArea">
+    @{
+        Html.RenderPartial("History", Model);
+    }
+</div>
+
+@Ajax.ActionLink("ActionLink", "Index", new { user = "", logOn = "", logOff = "", chatMessage = "" }
+
+<div id="inputForm">
+    
+</div>
