@@ -12,3 +12,19 @@ $(document).ready(function () {
     });
 });
 //przejście dalej
+function LoginOnSuccess(result) {
+    
+    Scroll();
+    ShowLastRefresh();
+    
+    //aktualizacja co 5 sek
+    setTimeout("Refresh();", 5000);
+    
+    //wysyłanie wiadomości za pomoca enter
+    $( '#txtMessage ').keydown(function) (e) {
+        if (e.keyCode == 13) {
+            e.preventDefault();
+            $("#btnMessage").click();
+        }
+    });
+    
