@@ -71,7 +71,19 @@ function ChatOnFailure(result) {
     $("#Error").text(result.responseText);
     setTimeout("$('#Error').empty();", 2000);
 }
+function ChatOnSuccess(result) {
+    Scroll();
+    Show();
+    ShowLastRefresh();
+}
 
+function Scroll() {
+    var win = $('#Messages');
+    var height = win[0].scrollHeight;
+    win.scrollTop(height);
+}
+
+  
     
     
     
