@@ -24,7 +24,7 @@ function LoginOnSuccess(result) {
 
     //wysylanie wiadomosci za pomoca enter
     $('#txtMessage').keydown(function (e) {
-        if (e.keyCode == 13) {
+        if (e.keyCode === 13) {
             e.preventDefault();
             $("#btnMessage").click();
         }
